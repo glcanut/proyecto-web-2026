@@ -1,0 +1,386 @@
+/* GLOBAL VARIABLES */
+
+:root {
+
+    --primary-color: #00d4ff;
+    --secondary-color: #7c3aed;
+    --accent-color: #ef4444;
+
+    --background-color: #0b1020;
+    --secondary-background-color: #141b2d;
+
+    --card-color: #1c2541;
+
+    --text-color: #ffffff;
+    --secondary-text-color: #cbd5e1;
+
+    --border-color: 1px solid #FFFFFF1A;
+
+}
+
+body {
+
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+}
+
+/* TITLES*/
+
+h1,
+h2,
+h3 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--secondary-text-color);
+}
+
+
+/* HEADER */
+
+.header {
+    background-color: #08101f;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.logo img {
+    width: 60px;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+
+/* MAIN */
+
+main {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+
+/* HERO */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 80px 0;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    margin-bottom: 20px;
+}
+
+.hero-content h2 {
+    margin: 25px 0;
+}
+
+.hero-buttons {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow:
+        0 0 25px rgba(0, 212, 255, .25);
+}
+
+.hero-image figcaption {
+    margin-top: 10px;
+    color: var(--secondary-text-color);
+}
+
+/* BUTTONS */
+
+.btn-primary {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    background:
+        linear-gradient(135deg,
+            var(--primary-color),
+            var(--secondary-color));
+
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    padding: 14px 28px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* SECTION TITLES */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+/* CATEGORIES */
+
+.categories {
+    padding: 80px 0;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 25px;
+}
+
+.category {
+    height: 220px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.category::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .5);
+}
+
+.category h3 {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: 2rem;
+}
+
+.category:hover {
+    transform: translateY(-5px);
+}
+
+.marvel {
+    background-image: url("../assets/marvelLogo.jpg");
+}
+
+.dc {
+    background-image: url("../assets/dcLogo.webp");
+}
+
+.promo {
+    background-image: url("../assets/heroclix-iconix.jpg");
+}
+
+
+/* PRODUCTS */
+
+.featured-products,
+.latest-products {
+    padding: 80px 0;
+}
+
+.product-card {
+    background: var(--card-color);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: 0.3s;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 25px;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    box-shadow:
+        0 10px 25px rgba(0, 212, 255, .18);
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.price {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+
+/* OFFER BANNER */
+
+.offer-banner {
+    padding: 60px;
+    margin: 50px 0;
+    text-align: center;
+    border-radius: 25px;
+    background:
+        linear-gradient(135deg,
+            var(--accent-color),
+            #991b1b);
+}
+
+.offer-banner p {
+    color: white;
+    margin-top: 15px;
+}
+
+
+/* FOOTER */
+
+.footer {
+    background-color: var(--secondary-background-color);
+    padding: 60px 5%;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.social-links img {
+    width: 40px;
+    transition: 0.3s;
+}
+
+.social-links img:hover {
+    transform: scale(1.15);
+}
+
+.footer-copy {
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+/* MAP */
+
+.map {
+    width: 20rem;
+    height: 10rem;
+    border: none;
+    border-radius: 15px;
+    margin-top: 40px;
+}
+
+/* CATALOG */
+
+.catalog-grid {
+    display: grid;
+    gap: 25px;
+    margin-top: 40px;
+}

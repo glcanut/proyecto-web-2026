@@ -4,15 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
     <title>Heroclix Store</title>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <img src="./assets/heroclix-logo.png" alt="Logo HeroClix Store">
-            HEROCLIX STORE
-            <ul>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./assets/heroclix-logo.png" alt="Logo HeroClix Store">
+                HEROCLIX STORE
+            </div>
+            <ul class="nav-links">
                 <li><a href="#">Inicio</a></li>
                 <li><a href="./pages/conoceElJuego.html">Conoce el Juego</a></li>
                 <li><a href="./pages/catalogo.html">Catálogo</a></li>
@@ -23,22 +26,25 @@
     </header>
     <main>
         <h1>Heroclix</h1>
-        <p>Esta es la primera entrega de mi proyecto.</p>
-        <!-- HERO -->
 
-        <section>
-            <h2>La Mayor Colección de HeroClix</h2>
-            <p>
-                Encontrá figuras Marvel, DC Comics y ediciones limitadas.
-                Completá tu colección o preparate para tu próximo torneo.
-            </p>
-            <button>
-                Explorar Catálogo
-            </button>
-            <button>
-                Últimos Ingresos
-            </button>
-            <figure>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>La Mayor Colección de HeroClix</h2>
+                <p>
+                    Encontrá figuras Marvel, DC Comics y ediciones limitadas.
+                    Completá tu colección o preparate para tu próximo torneo.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn-primary">
+                        Explorar Catálogo
+                    </button>
+                    <button class="btn-secondary">
+                        Últimos Ingresos
+                    </button>
+                </div>
+            </div>
+            <figure class="hero-image">
                 <img src="./assets/banner.jpg" alt="HeroClix">
                 <figcaption>Explora nuestra amplia selección de figuras de HeroClix.</figcaption>
             </figure>
@@ -46,68 +52,80 @@
 
         <!-- CATEGORÍAS -->
 
-        <section>
-            <h2>Categorías</h2>
-            <article>
-                <h3>Marvel</h3>
-            </article>
-            <article>
-                <h3>Dc</h3>
-            </article>
-            <article>
-                <h3>Promo</h3>
-            </article>
+        <section class="categories">
+            <h2 class="section-title">Categorías</h2>
+            <div class="category-grid">
+                <article class="category marvel">
+                    <!-- <h3>Marvel</h3> -->
+                </article>
+                <article class="category dc">
+                    <!-- <h3>Dc</h3> -->
+                </article>
+                <article class="category promo">
+                    <!-- <h3>Promo</h3> -->
+                </article>
+            </div>
         </section>
 
         <!-- PRODUCTOS DESTACADOS -->
 
-        <section>
-            <h2>Productos Destacados</h2>
-            <article>
-                <img src="./assets/spider-man.jpg" alt="Spider-Man">
-                <h3>Spider-Man</h3>
-                <p>
-                    $3.500
-                </p>
-                <button>
-                    Agregar al carrito
-                </button>
-            </article>
-            <article>
-                <img src="./assets/batman.webp" alt="Batman">
-                <h3>Batman</h3>
-                <p>
-                    $4.200
-                </p>
-                <button>
-                    Agregar al carrito
-                </button>
-            </article>
-            <article>
-                <img src="./assets/wolverine.jpg" alt="Wolverine">
-                <h3>Wolverine</h3>
-                <p>
-                    $3.800
-                </p>
-                <button>
-                    Agregar al carrito
-                </button>
-            </article>
-            <article>
-                <img src="./assets/thanos.jpg" alt="Thanos">
-                <h3>Thanos</h3>
-                <p>
-                    $6.500
-                </p>
-                <button>
-                    Agregar al carrito
-                </button>
-            </article>
+        <section class="featured-products">
+            <h2 class="section-title">Productos Destacados</h2>
+            <div class="products-grid">
+                <article class="product-card">
+                    <img src="./assets/spider-man.jpg" alt="Spider-Man">
+                    <div class="product-info">
+                        <h3>Spider-Man</h3>
+                        <p class="price">
+                            $3.500
+                        </p>
+                        <button class="btn-primary">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="./assets/batman.webp" alt="Batman">
+                    <div class="product-info">
+                        <h3>Batman</h3>
+                        <p class="price">
+                            $4.200
+                        </p>
+                        <button class="btn-primary">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="./assets/wolverine.jpg" alt="Wolverine">
+                    <div class="product-info">
+                        <h3>Wolverine</h3>
+                        <p class="price">
+                            $3.800
+                        </p>
+                        <button class="btn-primary">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="./assets/thanos.jpg" alt="Thanos">
+                    <div class="product-info">
+                        <h3>Thanos</h3>
+                        <p class="price">
+                            $6.500
+                        </p>
+                        <button class="btn-primary">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </article>
+            </div>
         </section>
 
         <!-- OFERTAS -->
 
-        <section>
+        <section class="offer-banner">
             <h2>20% OFF en Figuras Marvel</h2>
             <p>
                 Promoción válida por tiempo limitado.
@@ -116,53 +134,63 @@
 
         <!-- ÚLTIMOS INGRESOS -->
 
-        <section>
-            <h2>Últimos Ingresos</h2>
-            <article>
-                <img src="./assets/deadpool.jpg" alt="Deadpool">
-                <h3>Deadpool</h3>
-                <p>
-                    $4.800
-                </p>
-                <button>
-                    Agregar al carrito
-                </button>
-            </article>
-            <article>
-                <img src="./assets/flash.jpg" alt="Flash">
-                <h3>Flash</h3>
-                <p>
-                    $4.300
-                </p>
-                <button>
-                    Agregar al carrito
-                </button>
-            </article>
-            <article>
-                <img src="./assets/green-lantern.jpg" alt="Green Lantern">
-                <h3>Green Lantern</h3>
-                <p>
-                    $4.700
-                </p>
-                <button>
-                    Agregar al carrito
-                </button>
-            </article>
-            <article>
-                <img src="./assets/venom.jpg" alt="Venom">
-                <h3>Venom</h3>
-                <p>
-                    $5.200
-                </p>
-                <button>
-                    Agregar al carrito
-                </button>
-            </article>
+        <section class="latest-products">
+            <h2 class="section-title">Últimos Ingresos</h2>
+            <div class="products-grid">
+                <article class="product-card">
+                    <img src="./assets/deadpool.jpg" alt="Deadpool">
+                    <div class="product-info">
+                        <h3>Deadpool</h3>
+                        <p class="price">
+                            $4.800
+                        </p>
+                        <button>
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="./assets/flash.jpg" alt="Flash">
+                    <div class="product-info">
+                        <h3>Flash</h3>
+                        <p class="price">
+                            $4.300
+                        </p>
+                        <button>
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="./assets/green-lantern.jpg" alt="Green Lantern">
+                    <div class="product-info">
+                        <h3>Green Lantern</h3>
+                        <p class="price">
+                            $4.700
+                        </p>
+                        <button>
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="./assets/venom.jpg" alt="Venom">
+                    <div class="product-info">
+                        <h3>Venom</h3>
+                        <p class="price">
+                            $5.200
+                        </p>
+                        <button>
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </article>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <section>
+    <footer class="footer">
+        <section class="footer-content">
             <article>
                 <h3>HeroClix Store</h3>
                 <p>Tu tienda especializada en HeroClix.</p>
@@ -174,22 +202,23 @@
             </article>
             <article>
                 <h3>Redes</h3>
-                <ul>
+                <ul class="social-links">
                     <li><a href="https://www.facebook.com/" target="_blank"><img src="./assets/facebook.png"
                                 alt="Facebook"></a></li>
-                    <li><a href="https://www.instagram.com/" target="_blank"><img src="./assets/logo-insta.png"
+                    <li><a href="https://www.instagram.com/" target="_blank"><img src="./assets/instagram.png"
                                 alt="Instagram"></a></li>
-                    <li><a href="https://x.com/" target="_blank"><img src="./assets/x-logo.png" alt="X"></a></li>
+                    <li><a href="https://x.com/" target="_blank"><img src="./assets/twitter-alt-circle.png" alt="X"></a>
+                    </li>
                 </ul>
             </article>
+            <iframe class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1641.9562381167143!2d-58.44632090566041!3d-34.60637464853706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca1189c237db%3A0x7d00b48da5073e21!2sCid%20Campeador!5e0!3m2!1ses!2sar!4v1793733514128!5m2!1ses!2sar"
+                allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
         </section>
-        <p>
+        <p class="footer-copy">
             © 2026 HeroClix Store - Todos los derechos reservados
         </p>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1641.9562381167143!2d-58.44632090566041!3d-34.60637464853706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca1189c237db%3A0x7d00b48da5073e21!2sCid%20Campeador!5e0!3m2!1ses!2sar!4v1793733514128!5m2!1ses!2sar"
-            allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
-        </iframe>
     </footer>
 
 </body>
